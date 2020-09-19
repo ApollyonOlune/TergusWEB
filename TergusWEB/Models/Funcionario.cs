@@ -43,13 +43,10 @@ namespace TergusWEB.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Data_da_demissao { get; set; }
         [Required(ErrorMessage = "É nescessário que {0} esteja preenchido.")]
-        [DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone 1")]
         public string telefone_1 { get; set; }
-        [DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone 2")]
         public string telefone_2 { get; set; }
-        [DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone 3")]
         public string telefone_3 { get; set; }
         [Required(ErrorMessage = "É nescessário que {0} esteja preenchido.")]

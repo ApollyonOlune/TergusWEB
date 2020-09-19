@@ -1,0 +1,125 @@
+﻿@model IEnumerable<TergusWEB.Models.Processo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_do_processo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor_da_acao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Classe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assunto_principal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Outros_asssuntos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Re)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Testemunha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Advogado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vara)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Portal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_cliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_do_processo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor_da_acao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Competencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Classe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Assunto_principal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Outros_asssuntos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Re)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Testemunha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Advogado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vara)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Portal)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

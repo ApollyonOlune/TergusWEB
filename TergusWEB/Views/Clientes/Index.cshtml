@@ -1,0 +1,85 @@
+﻿@model IEnumerable<TergusWEB.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Gerênciar Clientes";
+}
+
+<h1>Gerênciar Clientes</h1>
+
+<p>
+    <a asp-action="CreatePF" class="btn btn-success">Cadastrar Novo Usuário Pessoa Física</a>
+    <a asp-action="CreatePJ" class="btn btn-success">Cadastrar Novo Usuário Pessoa Jurídica</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome_Razao_Social)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf_CNPJ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente_Juridico)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome_Razao_Social)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf_CNPJ)
+            </td>
+            @if (item.Status == "Cancelado")
+            {
+                <th class="table-danger">
+                    @Html.DisplayFor(modelItem => item.Status)
+                </th>
+            }
+            @if (item.Status == "Ativo")
+            {
+                <th class="table-success">
+                    @Html.DisplayFor(modelItem => item.Status)
+                </th>
+            }
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente_Juridico)
+            </td>
+            <td>
+                <img src="~/img/edit_profile_20px.png" />
+                @if (item.Cliente_Juridico == false)
+                {
+                    <a asp-action="EditPF" asp-route-id="@item.Id">Editar</a>
+                }
+                @if (item.Cliente_Juridico == true)
+                {
+                    <a asp-action="EditPJ" asp-route-id="@item.Id">Editar</a>
+                }
+                |
+                <img src="~/img/find_user_male_20px.png" />
+                @if (item.Cliente_Juridico == false)
+                {
+                    <a asp-action="DetailsPF" asp-route-id="@item.Id">Visualizar</a>
+                }
+                @if (item.Cliente_Juridico == true)
+                {
+                    <a asp-action="DetailsPJ" asp-route-id="@item.Id">Visualizar</a>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

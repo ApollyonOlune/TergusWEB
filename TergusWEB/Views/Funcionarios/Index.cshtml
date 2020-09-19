@@ -1,0 +1,107 @@
+﻿@model IEnumerable<TergusWEB.Models.Funcionario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_de_nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Advogado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Demitido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_da_demissao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefone_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefone_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefone_3)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_de_nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Advogado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Demitido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_da_demissao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefone_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefone_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefone_3)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
