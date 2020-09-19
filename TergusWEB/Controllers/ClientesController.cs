@@ -26,7 +26,7 @@ namespace TergusWEB.Controllers
         }
 
         // GET: Clientes/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> DetailsPF(int? id)
         {
             if (id == null)
             {
@@ -42,6 +42,25 @@ namespace TergusWEB.Controllers
 
             return View(cliente);
         }
+
+        // GET: Clientes/Details/5
+        public async Task<IActionResult> DetailsPJ(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var cliente = await _context.Cliente
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+
+            return View(cliente);
+        }
+
 
         // GET: Clientes/CreatePF
         public IActionResult CreatePF()

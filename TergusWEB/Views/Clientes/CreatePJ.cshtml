@@ -7,6 +7,7 @@
 <h1>Cadastrar Cliente Pessoa Jurídica</h1>
 
 <a asp-action="CreatePF" class="btn btn-warning">Trocar para Pessoa Física</a>
+<input type="submit" value="Salvar" class="btn btn-success" />
 <a asp-action="Index" class="btn btn-danger">Voltar</a>
 <hr />
 <div class="row">
@@ -118,13 +119,12 @@
                     <input class="form-check-input" asp-for="Cliente_Juridico" /> @Html.DisplayNameFor(model => model.Cliente_Juridico)
                 </label>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-success" />
-                <a asp-action="Index" class="btn btn-danger">Cancelar</a>
-            </div>
         </form>
     </div>
 </div>
+<a asp-action="CreatePF" class="btn btn-warning">Trocar para Pessoa Física</a>
+<input type="submit" value="Salvar" class="btn btn-success" />
+<a asp-action="Index" class="btn btn-danger">Cancelar</a>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

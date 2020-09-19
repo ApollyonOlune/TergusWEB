@@ -5,9 +5,10 @@
 }
 
 <h1>Visualizar Cliente Pessoa Jurídica</h1>
-<a asp-action="EditPJ" asp-route-id="@Model.Id">Editar Cliente Pessoa Jurídica</a> |
+<a asp-action="EditPJ" class="btn btn-warning" asp-route-id="@Model.Id">Editar Cliente Pessoa Jurídica</a>
 <a asp-action="Index" class="btn btn-danger">Voltar</a>
 <div>
+    <h4></h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -139,6 +140,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="EditPJ" asp-route-id="@Model.Id">Editar Cliente Pessoa Jurídica</a> |
+    <a asp-action="EditPJ" asp-route-id="@Model.Id">Editar Cliente Pessoa Jurídica</a>
     <a asp-action="Index" class="btn btn-danger">Voltar</a>
 </div>

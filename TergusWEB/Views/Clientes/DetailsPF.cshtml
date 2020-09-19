@@ -1,11 +1,11 @@
 ﻿@model TergusWEB.Models.Cliente
 
 @{
-    ViewData["Title"] = "Visualizar Cliente Pessoa Fisica";
+    ViewData["Title"] = "Visualizar Cliente Pessoa Física";
 }
 
-<h1>Visualizar Cliente Pessoa Fisica</h1>
-<a asp-action="EditPF" asp-route-id="@Model.Id">Editar Cliente Pessoa Física</a> |
+<h1>Visualizar Cliente Pessoa Física</h1>
+<a asp-action="EditPF" class="btn btn-warning" asp-route-id="@Model.Id">Editar Cliente Pessoa Física</a>
 <a asp-action="Index" class="btn btn-danger">Voltar</a>
 <div>
     <hr />
@@ -151,6 +151,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="EditPF" asp-route-id="@Model.Id">Editar Cliente Pessoa Física</a> |
+    <a asp-action="EditPF" asp-route-id="@Model.Id">Editar Cliente Pessoa Física</a>
     <a asp-action="Index" class="btn btn-danger">Voltar</a>
 </div>

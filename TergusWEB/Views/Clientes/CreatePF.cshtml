@@ -1,12 +1,13 @@
 ﻿@model TergusWEB.Models.Cliente
 
 @{
-    ViewData["Title"] = "Cadastrar Cliente Pessoa Fisica";
+    ViewData["Title"] = "Cadastrar Cliente Pessoa Física";
 }
 
-<h1>Cadastrar Cliente Pessoa Fisica</h1>
+<h1>Cadastrar Cliente Pessoa Física</h1>
 
 <a asp-action="CreatePJ" class="btn btn-warning">Trocar para Pessoa Jurídica</a>
+<input type="submit" value="Salvar" class="btn btn-primary" />
 <a asp-action="Index" class="btn btn-danger">Voltar</a>
 <hr />
 <div class="row">
@@ -128,18 +129,12 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-danger">Cancelar</a>
-            </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+<a asp-action="CreatePJ" class="btn btn-warning">Trocar para Pessoa Jurídica</a>
+<input type="submit" value="Salvar" class="btn btn-primary" />
+<a asp-action="Index" class="btn btn-danger">Cancelar</a>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
