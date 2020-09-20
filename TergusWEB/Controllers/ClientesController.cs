@@ -19,6 +19,15 @@ namespace TergusWEB.Controllers
             _context = context;
         }
 
+        //Verficar se Cliente Já está Cadastrado
+
+        public async Task<JsonResult> CPFCNPJExisteAsync(string cpfcnpj)
+        {
+            if (await _context.Cliente.AnyAsync(x => x.CpfCNPJ == cpfcnpj))
+                return Json("CPF ou CNPJ já cadastrado no sistema!");
+            return Json(true);
+        }
+
         // GET: Clientes
         public async Task<IActionResult> Index()
         {

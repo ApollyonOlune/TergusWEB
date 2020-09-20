@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,6 +14,7 @@ namespace TergusWEB.Models
        // [Required(ErrorMessage ="É nescessário que {0} esteja preenchido.")]
         [StringLength(200, MinimumLength =3, ErrorMessage ="{0} deve está entre {2} e {1}")]
         public string Nome_Razao_Social { get; set; }
+        [Remote("CPFCNPJExiste", "Clientes")]
         [Required(ErrorMessage ="É nescessário que {0} esteja preenchido.")]
         [Display(Name = "CPF/CNPJ")]
         public string CpfCNPJ { get; set; }
