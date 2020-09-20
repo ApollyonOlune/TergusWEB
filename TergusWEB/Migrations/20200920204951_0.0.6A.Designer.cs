@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TergusWEB.Data;
 
 namespace TergusWEB.Migrations
 {
     [DbContext(typeof(TergusWEBContext))]
-    partial class TergusWEBContextModelSnapshot : ModelSnapshot
+    [Migration("20200920204951_0.0.6A")]
+    partial class _006A
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

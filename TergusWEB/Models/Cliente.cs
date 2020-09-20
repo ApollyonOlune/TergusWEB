@@ -15,7 +15,7 @@ namespace TergusWEB.Models
         public string Nome_Razao_Social { get; set; }
         [Required(ErrorMessage ="É nescessário que {0} esteja preenchido.")]
         [Display(Name = "CPF/CNPJ")]
-        public string Cpf_CNPJ { get; set; }
+        public string CpfCNPJ { get; set; }
         [Required(ErrorMessage ="É nescessário que {0} esteja preenchido.")]
         [Display(Name = "RG/Inscrição Estadual")]
         public string Rg_IE { get; set; }
@@ -91,11 +91,11 @@ namespace TergusWEB.Models
         public Cliente()
         { 
         }
-        public Cliente(int id, string nome_Razao_Social, string cpf_CNPJ, string rg_IE, string cep, string endereco, string numero, string bairro, string cidade, string estado, string complemento, DateTime data_do_cadastro, string status, string observacao, string telefone_1, string telefone_2, string telefone_3, string email, string nome_Fantasia, string inscricao_Municipal, string site, bool cliente_Juridico)
+        public Cliente(int id, string nome_Razao_Social, string cpfCNPJ, string rg_IE, string cep, string endereco, string numero, string bairro, string cidade, string estado, string complemento, DateTime data_do_cadastro, string status, string observacao, string telefone_1, string telefone_2, string telefone_3, string email, string nome_Fantasia, string inscricao_Municipal, string site, bool cliente_Juridico)
         {
             Id = id;
             Nome_Razao_Social = nome_Razao_Social;
-            Cpf_CNPJ = cpf_CNPJ;
+            CpfCNPJ = cpfCNPJ;
             Rg_IE = rg_IE;
             Cep = cep;
             Endereco = endereco;
@@ -116,11 +116,11 @@ namespace TergusWEB.Models
             Site = site;
             Cliente_Juridico = cliente_Juridico;
         }
-        public Cliente(int id, string nome_Razao_Social, string cpf_CNPJ, string rg_IE, DateTime data_da_expedicao, string afiliacao1, string afiliacao2, string naturalidade_cidade, string naturalidade_estado, DateTime data_de_nascimento, string cep, string endereco, string numero, string bairro, string cidade, string estado, string complemento, DateTime data_do_cadastro, string status, string observacao, string telefone_1, string telefone_2, string telefone_3, string email)
+        public Cliente(int id, string nome_Razao_Social, string cpfCNPJ, string rg_IE, DateTime data_da_expedicao, string afiliacao1, string afiliacao2, string naturalidade_cidade, string naturalidade_estado, DateTime data_de_nascimento, string cep, string endereco, string numero, string bairro, string cidade, string estado, string complemento, DateTime data_do_cadastro, string status, string observacao, string telefone_1, string telefone_2, string telefone_3, string email)
         {
             Id = id;
             Nome_Razao_Social = nome_Razao_Social;
-            Cpf_CNPJ = cpf_CNPJ;
+            CpfCNPJ = cpfCNPJ;
             Rg_IE = rg_IE;
             Data_da_expedicao = data_da_expedicao;
             Afiliacao1 = afiliacao1;
@@ -143,11 +143,11 @@ namespace TergusWEB.Models
             Telefone_3 = telefone_3;
             Email = email;
         }
-        public Cliente(int id, string nome_Razao_Social, string cpf_CNPJ, string rg_IE, DateTime data_da_expedicao, string afiliacao1, string afiliacao2, string naturalidade_cidade, string naturalidade_estado, DateTime data_de_nascimento, string cep, string endereco, string numero, string bairro, string cidade, string estado, string complemento, DateTime data_do_cadastro, string status, string observacao, string telefone_1, string telefone_2, string telefone_3, string email, string nome_Fantasia, string inscricao_Municipal, string site, bool cliente_Juridico)
+        public Cliente(int id, string nome_Razao_Social, string cpfCNPJ, string rg_IE, DateTime data_da_expedicao, string afiliacao1, string afiliacao2, string naturalidade_cidade, string naturalidade_estado, DateTime data_de_nascimento, string cep, string endereco, string numero, string bairro, string cidade, string estado, string complemento, DateTime data_do_cadastro, string status, string observacao, string telefone_1, string telefone_2, string telefone_3, string email, string nome_Fantasia, string inscricao_Municipal, string site, bool cliente_Juridico)
         {
             Id = id;
             Nome_Razao_Social = nome_Razao_Social;
-            Cpf_CNPJ = cpf_CNPJ;
+            CpfCNPJ = cpfCNPJ;
             Rg_IE = rg_IE;
             Data_da_expedicao = data_da_expedicao;
             Afiliacao1 = afiliacao1;

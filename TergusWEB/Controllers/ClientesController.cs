@@ -73,7 +73,7 @@ namespace TergusWEB.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreatePF([Bind("Id,Nome_Razao_Social,Cpf_CNPJ,Rg_IE,Data_da_expedicao,Afiliacao1,Afiliacao2,Naturalidade_cidade,Naturalidade_estado,Data_de_nascimento,Cep,Endereco,Numero,Bairro,Cidade,Estado,Complemento,Data_do_cadastro,Status,Observacao,Telefone_1,Telefone_2,Telefone_3,Email")] Cliente cliente)
+        public async Task<IActionResult> CreatePF([Bind("Id,Nome_Razao_Social,CpfCNPJ,Rg_IE,Data_da_expedicao,Afiliacao1,Afiliacao2,Naturalidade_cidade,Naturalidade_estado,Data_de_nascimento,Cep,Endereco,Numero,Bairro,Cidade,Estado,Complemento,Data_do_cadastro,Status,Observacao,Telefone_1,Telefone_2,Telefone_3,Email")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace TergusWEB.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreatePJ([Bind("Id,Nome_Razao_Social,Cpf_CNPJ,Rg_IE,Cep,Endereco,Numero,Bairro,Cidade,Estado,Complemento,Data_do_cadastro,Status,Observacao,Telefone_1,Telefone_2,Telefone_3,Email,Nome_Fantasia,Inscricao_Municipal,Site,Cliente_Juridico,")] Cliente cliente)
+        public async Task<IActionResult> CreatePJ([Bind("Id,Nome_Razao_Social,CpfCNPJ,Rg_IE,Cep,Endereco,Numero,Bairro,Cidade,Estado,Complemento,Data_do_cadastro,Status,Observacao,Telefone_1,Telefone_2,Telefone_3,Email,Nome_Fantasia,Inscricao_Municipal,Site,Cliente_Juridico,")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -128,7 +128,7 @@ namespace TergusWEB.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditPF(int id, [Bind("Id,Nome_Razao_Social,Cpf_CNPJ,Rg_IE,Data_da_expedicao,Afiliacao1,Afiliacao2,Naturalidade_cidade,Naturalidade_estado,Data_de_nascimento,Cep,Endereco,Numero,Bairro,Cidade,Estado,Complemento,Data_do_cadastro,Status,Observacao,Telefone_1,Telefone_2,Telefone_3,Email")] Cliente cliente)
+        public async Task<IActionResult> EditPF(int id, [Bind("Id,Nome_Razao_Social,CpfCNPJ,Rg_IE,Data_da_expedicao,Afiliacao1,Afiliacao2,Naturalidade_cidade,Naturalidade_estado,Data_de_nascimento,Cep,Endereco,Numero,Bairro,Cidade,Estado,Complemento,Data_do_cadastro,Status,Observacao,Telefone_1,Telefone_2,Telefone_3,Email")] Cliente cliente)
         {
             if (id != cliente.Id)
             {
@@ -179,7 +179,7 @@ namespace TergusWEB.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditPJ(int id, [Bind("Id,Nome_Razao_Social,Cpf_CNPJ,Rg_IE,Cep,Endereco,Numero,Bairro,Cidade,Estado,Complemento,Data_do_cadastro,Status,Observacao,Telefone_1,Telefone_2,Telefone_3,Email,Nome_Fantasia,Inscricao_Municipal,Site,Cliente_Juridico")] Cliente cliente)
+        public async Task<IActionResult> EditPJ(int id, [Bind("Id,Nome_Razao_Social,CpfCNPJ,Rg_IE,Cep,Endereco,Numero,Bairro,Cidade,Estado,Complemento,Data_do_cadastro,Status,Observacao,Telefone_1,Telefone_2,Telefone_3,Email,Nome_Fantasia,Inscricao_Municipal,Site,Cliente_Juridico")] Cliente cliente)
         {
             if (id != cliente.Id)
             {
